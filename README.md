@@ -22,13 +22,13 @@ FreeGamesLibrary utilizes the FreeToPlay API for fetching game data. More inform
 <img src="https://github.com/SaharYehezkel/FreeGamesLibrary/assets/36640987/8a13614f-7ddf-4d2e-babc-6fa30fad71ce" width="300">
 
 ### Game Categories
-<img src="https://github.com/SaharYehezkel/FreeGamesLibrary/assets/36640987/ead193ce-e673-4dd6-9c71-4dbfb46b6731" width="300">
+<img src="">
 
 ### Search Results
 <img src="https://github.com/SaharYehezkel/FreeGamesLibrary/assets/36640987/07e49f98-7902-4560-9774-4e0035716fd4" width="300">
 
 ### Game Details
-<img src="https://github.com/SaharYehezkel/FreeGamesLibrary/assets/36640987/8d739f71-ccad-49e7-aacf-9fa44c28fe97" width="300">
+<img src="https://github.com/SaharYehezkel/FreeGamesLibrary/assets/36640987/ead193ce-e673-4dd6-9c71-4dbfb46b6731" width="300">
 
 ### Login Screen
 <img src="https://github.com/SaharYehezkel/FreeGamesLibrary/assets/36640987/11425558-10f5-4c8f-a3a4-cf6faec10cdb" width="300">
