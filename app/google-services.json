@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "185124154068",
+    "firebase_url": "https://gameslibrary-9b49b-default-rtdb.firebaseio.com",
+    "project_id": "gameslibrary-9b49b",
+    "storage_bucket": "gameslibrary-9b49b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:185124154068:android:a1d2f3e48a94807984e941",
+        "android_client_info": {
+          "package_name": "com.example.freegameslibrary"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDmCEWeVhKk7Ebpq48te5_FPWpF3DXJOkc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
