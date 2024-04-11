@@ -20,9 +20,10 @@ FreeGamesLibrary utilizes the FreeToPlay API for fetching game data. More inform
 
 <img src="https://github.com/SaharYehezkel/FreeGamesLibrary/assets/36640987/8a13614f-7ddf-4d2e-babc-6fa30fad71ce" width="300">
 <img src="https://github.com/SaharYehezkel/FreeGamesLibrary/assets/36640987/03e9f3a8-80cb-407a-9d3a-e86b4377bc5b" width="300">
-<img src="https://github.com/SaharYehezkel/FreeGamesLibrary/assets/36640987/c0de812c-1a31-40f9-9894-a6ccb0b39935" width="300">
-<img src="https://github.com/SaharYehezkel/FreeGamesLibrary/assets/36640987/8b622fab-395e-4dea-a1c9-9bf6057fbf2a" width="300">
-<img src="https://github.com/SaharYehezkel/FreeGamesLibrary/assets/36640987/11425558-10f5-4c8f-a3a4-cf6faec10cdb" width="300">
-<img src="https://github.com/SaharYehezkel/FreeGamesLibrary/assets/36640987/8d739f71-ccad-49e7-aacf-9fa44c28fe97" width="300">
-<img src="https://github.com/SaharYehezkel/FreeGamesLibrary/assets/36640987/07e49f98-7902-4560-9774-4e0035716fd4" width="300">
-<img src="https://github.com/SaharYehezkel/FreeGamesLibrary/assets/36640987/ead193ce-e673-4dd6-9c71-4dbfb46b6731" width="300">
+<img src="https://github.com/SaharYehezkel/FreeGamesLibrary/assets/36640987/7e279640-107a-46bb-9cd2-1bf19faf1d3f" width="300">
+<img src="https://github.com/SaharYehezkel/FreeGamesLibrary/assets/36640987/bac0b98a-b5ec-4a9c-8a4e-0a7e9b48805a" width="300">
+<img src="https://github.com/SaharYehezkel/FreeGamesLibrary/assets/36640987/86151b19-bc08-4b43-8d2d-07081a3a9219" width="300">
+<img src="https://github.com/SaharYehezkel/FreeGamesLibrary/assets/36640987/5339be58-3c0d-4393-b6a6-d48d5c24c623" width="300">
+<img src="https://github.com/SaharYehezkel/FreeGamesLibrary/assets/36640987/8290bafb-78ab-4522-b882-102f5d9933f2" width="300">
+<img src="https://github.com/SaharYehezkel/FreeGamesLibrary/assets/36640987/fd867d0f-791f-40ea-9253-4f4f579d1d6e" width="300">
+
