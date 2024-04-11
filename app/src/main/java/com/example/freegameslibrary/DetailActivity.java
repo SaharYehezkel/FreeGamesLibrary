@@ -9,6 +9,16 @@ import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.bumptech.glide.Glide;
+import android.widget.RatingBar;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+
+import com.example.freegameslibrary.RatingManager; // הוספתי את ייבוא המנהל
 
 public class DetailActivity extends AppCompatActivity {
     TextView titleGame, genreGame, shortDescriptionGame, gameUrlGame, platformGame, publisherGame, developerGame, releaseDateGame;
@@ -51,6 +61,44 @@ public class DetailActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 finish();
+            }
+        });
+
+        final RatingBar ratingBar = findViewById(R.id.ratingBar);
+
+        FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
+        if (currentUser != null) {
+            DatabaseReference userRef = FirebaseDatabase.getInstance().getReference().child("users").child(currentUser.getUid()).child("rating").child(String.valueOf(game.getId()));
+            userRef.addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(DataSnapshot dataSnapshot) {
+                    if (dataSnapshot.exists()) {
+                        // If a rating exists, set it in the RatingBar
+                        Float rating = dataSnapshot.getValue(Float.class);
+                        if (rating != null) {
+                            ratingBar.setRating(rating);
+                        }
+                    }
+                }
+
+                @Override
+                public void onCancelled(DatabaseError databaseError) {
+                    // Handle errors
+                }
+            });
+        }
+
+        ratingBar.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
+            @Override
+            public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
+                FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
+                if (currentUser != null) {
+                    DatabaseReference userRef = FirebaseDatabase.getInstance().getReference().child("users").child(currentUser.getUid()).child("rating").child(String.valueOf(game.getId()));
+                    userRef.setValue(rating);
+                    DatabaseReference gameRatingRef = FirebaseDatabase.getInstance().getReference().child("game_ratings").child(String.valueOf(game.getId())).child(currentUser.getUid());
+                    gameRatingRef.setValue(rating);
+                    RatingManager.updateGameAverageRating(String.valueOf(game.getId())); // קריאה לפונקציה לעדכון הדירוג הממוצע של המשחק
+                }
             }
         });
     }

@@ -95,6 +95,17 @@
         android:textSize="18sp"
         tools:text="Game URL" />
 
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="36dp"
+        android:isIndicator="false"
+        android:numStars="5"
+        android:rating="0"
+        android:stepSize="1" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"

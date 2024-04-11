@@ -15,6 +15,8 @@ public class Game implements Parcelable {
     private String developer;
     private String release_date;
     private String freetogame_profile_url;
+    private float averageRating;
+
 
     // Constructor
     public Game() {
@@ -34,6 +36,7 @@ public class Game implements Parcelable {
         developer = in.readString();
         release_date = in.readString();
         freetogame_profile_url = in.readString();
+
     }
 
     public static final Creator<Game> CREATOR = new Creator<Game>() {
@@ -66,6 +69,14 @@ public class Game implements Parcelable {
         dest.writeString(developer);
         dest.writeString(release_date);
         dest.writeString(freetogame_profile_url);
+
+    }
+    public float getAverageRating() {
+        return averageRating;
+    }
+
+    public void setAverageRating(float averageRating) {
+        this.averageRating = averageRating;
     }
 
 

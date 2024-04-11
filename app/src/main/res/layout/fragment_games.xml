@@ -38,7 +38,7 @@
                     android:layout_marginRight="5dp"
                     android:background="@drawable/buttonoff"
                     android:text="Home"
-                    android:textSize="12sp" />
+                    android:textSize="16sp" />
 
                 <Button
                     android:id="@+id/showFavoritesButton"
@@ -46,8 +46,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
                     android:background="@drawable/buttonoff"
-                    android:text="Show Favorites"
-                    android:textSize="12sp" />
+                    android:text="Favorites"
+                    android:textSize="16sp" />
 
             </LinearLayout>
         </LinearLayout>

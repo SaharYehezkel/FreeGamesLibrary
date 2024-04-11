@@ -106,7 +106,7 @@ public class RegisterFragment extends Fragment {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
 
-                            Toast.makeText(view.getContext(), "reg ok", Toast.LENGTH_LONG).show();
+                            Toast.makeText(view.getContext(), "Register successfully.", Toast.LENGTH_LONG).show();
                             addData(view);
                             Navigation.findNavController(view).navigate(R.id.action_registerFragment_to_loginFragment);
                         } else {

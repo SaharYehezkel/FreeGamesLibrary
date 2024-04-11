@@ -45,6 +45,7 @@ public class GamesAdapter extends RecyclerView.Adapter<GamesAdapter.MyViewHolder
         TextView genre;
         ImageView image;
         ImageButton like;
+        TextView rating;
 
         public MyViewHolder(View itemView) {
             super(itemView);
@@ -53,6 +54,7 @@ public class GamesAdapter extends RecyclerView.Adapter<GamesAdapter.MyViewHolder
             description = itemView.findViewById(R.id.tv_short_description);
             image = itemView.findViewById(R.id.imageView);
             like = itemView.findViewById(R.id.like);
+            rating = itemView.findViewById(R.id.textViewAmmountRating);
         }
     }
 
@@ -140,23 +142,30 @@ public class GamesAdapter extends RecyclerView.Adapter<GamesAdapter.MyViewHolder
             public void onClick(View view) {
                 Context context = view.getContext();
                 Intent intent = new Intent(context, DetailActivity.class);
-                //         Game currentGame = gamesList.get(position);
-                // Pass the data
-/*
-                intent.putExtra("game", game);              //  intent.putExtra("poster", currentItem.get());
-                intent.putExtra("name", currentGame.getTitle());
-             //   intent.putExtra("imageDrawable", currentGame.getImage());
-                intent.putExtra("genre", currentGame.getBio());
-                intent.putExtra("genre", currentGame.getBio());
+                intent.putExtra("game", game);
                 context.startActivity(intent);
-*/
-
-                intent.putExtra("game", game);              //  intent.putExtra("poster", currentItem.get());
-                context.startActivity(intent);
-
             }
         });
 
+        // Set the average rating of the game
+        DatabaseReference gameRatingRef = FirebaseDatabase.getInstance().getReference().child("games").child(String.valueOf(game.getId())).child("average_rating");
+        gameRatingRef.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                if (dataSnapshot.exists()) {
+                    double averageRating = dataSnapshot.getValue(Double.class);
+                    holder.rating.setText(String.valueOf(averageRating));
+                } else {
+                    // Handle case where the average rating doesn't exist
+                    holder.rating.setText("-");
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                // Handle error
+            }
+        });
     }
 
 
