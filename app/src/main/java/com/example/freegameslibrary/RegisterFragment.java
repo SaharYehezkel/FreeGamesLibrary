@@ -96,8 +96,6 @@ public class RegisterFragment extends Fragment {
         String userEmail = email.getText().toString().trim();
         String userPassword = password.getText().toString().trim();
 
-        // Create an instance of FirebaseAuth
-
 
         // Register the user in Firebase Authentication
         mAuth.createUserWithEmailAndPassword(userEmail, userPassword)
@@ -121,7 +119,6 @@ public class RegisterFragment extends Fragment {
     public void addData(View view){
         EditText emailEdittext = view.findViewById(R.id.registerEmailText);
         EditText passwordEditText = view.findViewById(R.id.registerPasswordText);
-
 
         FirebaseUser currentUser = mAuth.getCurrentUser();
         String str = currentUser.getUid();

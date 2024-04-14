@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "41294290428",
+    "project_id": "freegameslibrary-55588",
+    "storage_bucket": "freegameslibrary-55588.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:41294290428:android:19a51ec11327676df62679",
+        "android_client_info": {
+          "package_name": "com.example.freegameslibrary"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbawcAsstnR1utAU4DFMAtEd6WsxdCuVQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

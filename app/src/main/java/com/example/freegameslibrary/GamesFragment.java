@@ -37,7 +37,6 @@ public class GamesFragment extends Fragment {
     private GamesAdapter gamesAdapter;
     private AllGamesDataSet allGamesDataSet;
     private RecyclerView genresRecyclerView;
-
     private Button showFavoritesButton, homeButton;
 
     public GamesFragment() {
